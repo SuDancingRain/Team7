@@ -6,6 +6,21 @@
       "schemaMap": {
         "projectMain": {
           "realization": "dao/ProjectMainMongo"
+        },
+        "subject": {
+          "realization": "dao/SubjectMongo"
+        },
+        "term": {
+          "realization": "dao/TermMongo"
+        },
+        "assignment": {
+          "realization": "dao/AssignmentMongo"
+        },
+        "user": {
+          "realization": "dao/UserMongo"
+        },
+        "grade": {
+          "realization": "dao/GradeMongo"
         }
       }
     }

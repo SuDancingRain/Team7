@@ -1,11 +1,10 @@
 {
   "{asid}": {
-    "profileList": ["AsidAuthorities", "AsidExecutives", "AsidLicenseOwner", "Public"],
-    "useCaseMap": {
-    }
+    "profileList": ["AsidAuthorities","AsidExecutives","AsidLicenseOwner","Public"],
+    "useCaseMap": {}
   },
   "*": {
-    "profileList": ["Authorities", "Executives", "AwidLicenseOwner", "Public"],
+    "profileList": ["Authorities","Executives","AwidLicenseOwner","Public"],
     "useCaseMap": {
       "sys/uuAppWorkspace/init": {
         "sysStateList": ["created"],
@@ -16,7 +15,127 @@
       },
       "sys/uuAppWorkspace/initUve": {
         "sysStateList": ["created"],
-        "profileList": ["Public", "AwidLicenseOwner"]
+        "profileList": ["Public","AwidLicenseOwner"]
+      },
+      "subject/create": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "subject/delete": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "subject/update": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "subject/list": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "subject/get": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "subject/filter": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "term/create": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "term/delete": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "term/update": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "term/list": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "term/get": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "term/filter": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "assignment/create": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "assignment/delete": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "assignment/update": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "assignment/list": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "assignment/get": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "assignment/filter": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "user/create": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "user/delete": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "user/update": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "user/list": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "user/get": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "user/filter": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "grade/create": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "grade/delete": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "grade/update": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "grade/list": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "grade/get": {
+        "sysStateList": ["active"],
+        "profileList": []
+      },
+      "grade/filter": {
+        "sysStateList": ["active"],
+        "profileList": []
       }
     }
   }
