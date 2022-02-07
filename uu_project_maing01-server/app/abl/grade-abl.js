@@ -141,7 +141,7 @@ class GradeAbl {
 
     //Sets up a dtoOut and receives specified grade by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid,dtoIn.id);
 
     //Checks for existence of specified grade
 
@@ -190,7 +190,7 @@ class GradeAbl {
 
     //Sets up a dtoOut and receives specified grade by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid,dtoIn.id);
 
     //Checks for existence of specified grade
 
@@ -200,17 +200,8 @@ class GradeAbl {
 
     //attemps to delete record
     
-    try {
-      dtoOut = 
       await this.dao.delete(awid, dtoIn.id);
-    } catch (e) {
-
-      if (e instanceof ObjectStoreError) {
-        throw new Errors.Delete.GradeDaoDeleteFailed({ uuAppErrorMap }, e);
-      }
-      throw e;
-    }
-
+    
     //returns the errormap
 
     dtoOut.uuAppErrorMap = uuAppErrorMap;

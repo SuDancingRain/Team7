@@ -139,7 +139,7 @@ class TermAbl {
 
     //Sets up a dtoOut and receives specified term by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid, dtoIn.id);
 
     //Checks for existence of specified term
 
@@ -188,7 +188,7 @@ class TermAbl {
 
     //Sets up a dtoOut and receives specified term by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid, dtoIn.id);
 
     //Checks for existence of specified term
 
@@ -198,17 +198,8 @@ class TermAbl {
 
     //attemps to delete record
     
-    try {
-      dtoOut = 
       await this.dao.delete(awid, dtoIn.id);
-    } catch (e) {
-
-      if (e instanceof ObjectStoreError) {
-        throw new Errors.Delete.TermDaoDeleteFailed({ uuAppErrorMap }, e);
-      }
-      throw e;
-    }
-
+   
     //returns the errormap
 
     dtoOut.uuAppErrorMap = uuAppErrorMap;

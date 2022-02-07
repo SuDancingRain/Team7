@@ -141,7 +141,7 @@ class UserAbl {
 
     //Sets up a dtoOut and receives specified user by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid,dtoIn.id);
 
     //Checks for existence of specified user
 
@@ -190,7 +190,7 @@ class UserAbl {
 
     //Sets up a dtoOut and receives specified user by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid,dtoIn.id);
 
     //Checks for existence of specified user
 
@@ -200,17 +200,8 @@ class UserAbl {
 
     //attemps to delete record
     
-    try {
-      dtoOut = 
-      await this.dao.delete(awid, dtoIn.id);
-    } catch (e) {
-
-      if (e instanceof ObjectStoreError) {
-        throw new Errors.Delete.UserDaoDeleteFailed({ uuAppErrorMap }, e);
-      }
-      throw e;
-    }
-
+    await this.dao.delete(awid, dtoIn.id);
+    
     //returns the errormap
 
     dtoOut.uuAppErrorMap = uuAppErrorMap;

@@ -177,20 +177,12 @@ dtoOut=subjectResult
 
     //Sets up a dtoOut and receives specified subject by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid,dtoIn.id);
 
     //Checks for existence of specified subject
 
     if (!dtoOut) {
       throw new Errors.Update.SubjectDoesNotExist({ uuAppErrorMap }, { subjectId: dtoIn.id });
-    }
-    
-    //Checks for an existence of a subject with a same name
-    let name = dtoIn.name;
-    let subjectDb = await this.dao.getByName(awid, name);
-
-    if (subjectDb) {
-      throw new Errors.Update.SubjectAlreadyExists({ uuAppErrorMap }, { code: name });
     }
 
     //Attemps to change the dao record
@@ -234,7 +226,7 @@ dtoOut=subjectResult
 
     //Sets up a dtoOut and receives specified subject by ID
 
-    let dtoOut = await this.dao.get(awid.dtoIn.id);
+    let dtoOut = await this.dao.get(awid, dtoIn.id);
 
     //Checks for existence of specified subject
 
@@ -244,16 +236,7 @@ dtoOut=subjectResult
 
     //attemps to delete record
 
-    try {
-      dtoOut = 
-      await this.dao.delete(awid, dtoIn.id);
-    } catch (e) {
-
-      if (e instanceof ObjectStoreError) {
-        throw new Errors.Delete.SubjectDaoDeleteFailed({ uuAppErrorMap }, e);
-      }
-      throw e;
-    }
+    await this.dao.delete(awid, dtoIn.id);
 
     //returns the errormap
 
