@@ -6,6 +6,54 @@ import Plus4U5App from "uu_plus4u5g02-app";
 
 import Config from "./config/config.js";
 import Home from "../routes/home.js";
+
+
+import SubjectList from '../routes/subject-list';
+import SubjectDetail from '../routes/subject-detail';
+import TermList from '../routes/term-list';
+import TermDetail from '../routes/term-detail';
+import AssignmentList from '../routes/assignment-list';
+import AssignmentDetail from '../routes/assignment-detail';
+import UserList from '../routes/user-list';
+import UserDetail from '../routes/user-detail';
+import GradeDetail from "../routes/grade-detail";
+import GradeList from "../routes/grade-list";
+
+import CreateTerm from '../routes/term/create';
+import DeleteTerm from '../routes/term/delete';
+import UpdateTerm from '../routes/term/update';
+import ListTerm from '../routes/term/list';
+import GetTerm from '../routes/term/get';
+import FilterTerm from '../routes/term/filter';
+
+import CreateSubject from '../routes/subject/create';
+import DeleteSubject from '../routes/subject/delete';
+import UpdateSubject from '../routes/subject/update';
+import ListSubject from '../routes/subject/list';
+import GetSubject from '../routes/subject/get';
+import FilterSubject from '../routes/subject/filter';
+
+import CreateAssignment from '../routes/assignment/create';
+import DeleteAssignment from '../routes/assignment/delete';
+import UpdateAssignment from '../routes/assignment/update';
+import ListAssignment from '../routes/assignment/list';
+import GetAssignment from '../routes/assignment/get';
+import FilterAssignment from '../routes/assignment/filter';
+
+import CreateUser from '../routes/user/create';
+import DeleteUser from '../routes/user/delete';
+import UpdateUser from '../routes/user/update';
+import ListUser from '../routes/user/list';
+import GetUser from '../routes/user/get';
+import FilterUser from '../routes/user/filter';
+
+import ListGrade from '../routes/grade/list';
+import GetGrade from '../routes/grade/get';
+import CreateGrade from '../routes/grade/create';
+import UpdateGrade from '../routes/grade/update';
+import DeleteGrade from '../routes/grade/delete';
+import FilterGrade from '../routes/grade/filter';
+
 //@@viewOff:imports
 
 //@@viewOn:constants
@@ -19,6 +67,55 @@ const ROUTE_MAP = {
   about: (props) => <About {...props} />,
   "sys/uuAppWorkspace/initUve": (props) => <InitAppWorkspace {...props} />,
   controlPanel: (props) => <ControlPanel {...props} />,
+
+  
+  subjectDetail: { component: <SubjectDetail /> },
+  subjectList: { component: <SubjectList /> },
+  termDetail: { component: <TermDetail /> },
+  termList: { component: <TermList /> },
+  assignmentDetail: { component: <AssignmentDetail /> },
+  assignmentList: { component: <AssignmentList /> },
+  userDetail: { component: <UserDetail /> },
+  userList: { component: <UserList /> },
+  gradeDetail: { component: <GradeDetail /> },
+  gradeList: { component: <GradeList /> },
+
+  createTerm: { component: <CreateTerm /> },
+  deleteTerm: { component: <DeleteTerm /> },
+  updateTerm: { component: <UpdateTerm /> },
+  listTerm: { component: <ListTerm /> },
+  getTerm: { component: <GetTerm /> },
+  filterTerm: {component: <FilterTerm />},
+
+  createSubject: { component: <CreateSubject /> },
+  deleteSubject: { component: <DeleteSubject /> },
+  updateSubject: { component: <UpdateSubject /> },
+  listSubject: { component: <ListSubject /> },
+  getSubject: { component: <GetSubject /> },
+  filterSubject: {component: <FilterSubject />},
+
+  createUser: { component: <CreateUser /> },
+  deleteUser: { component: <DeleteUser /> },
+  updateUser: { component: <UpdateUser /> },
+  listUser: { component: <ListUser /> },
+  getUser: { component: <GetUser /> },
+  filterUser: {component: <FilterUser />},
+
+  createGrade: { component: <CreateGrade /> },
+  deleteGrade: { component: <DeleteGrade /> },
+  updateGrade: { component: <UpdateGrade /> },
+  getGrade: { component: <GetGrade /> },
+  listGrade: { component: <ListGrade /> },
+  filterGrade: {component: <FilterGrade />},
+
+
+  createAssignment: { component: <CreateAssignment /> },
+  deleteAssignment: { component: <DeleteAssignment /> },
+  updateAssignment: { component: <UpdateAssignment /> },
+  listAssignment: { component: <ListAssignment /> },
+  getAssignment: { component: <GetAssignment /> },
+  filterAssignment: {component: <FilterAssignment />},
+
   "*": () => (
     <Uu5Elements.Text category="story" segment="heading" type="h1">
       Not Found

@@ -13,6 +13,14 @@ const Lsi = {
       cs: "O aplikaci",
       en: "About Application",
     },
+    subjectList: {
+      cs: "List předmětů",
+      en: "List of subjects",
+    },
+    userList: {
+      cs: "List užiatelů",
+      en: "List of users",
+    },
   },
 
   about: {
