@@ -10,14 +10,11 @@ import Home from "../routes/home.js";
 
 import SubjectList from '../routes/subject-list';
 import SubjectDetail from '../routes/subject-detail';
-import TermList from '../routes/term-list';
 import TermDetail from '../routes/term-detail';
-import AssignmentList from '../routes/assignment-list';
 import AssignmentDetail from '../routes/assignment-detail';
 import UserList from '../routes/user-list';
 import UserDetail from '../routes/user-detail';
 import GradeDetail from "../routes/grade-detail";
-import GradeList from "../routes/grade-list";
 
 import CreateTerm from '../routes/term/create';
 import DeleteTerm from '../routes/term/delete';
@@ -72,13 +69,10 @@ const ROUTE_MAP = {
   subjectDetail: { component: <SubjectDetail /> },
   subjectList: { component: <SubjectList /> },
   termDetail: { component: <TermDetail /> },
-  termList: { component: <TermList /> },
   assignmentDetail: { component: <AssignmentDetail /> },
-  assignmentList: { component: <AssignmentList /> },
   userDetail: { component: <UserDetail /> },
   userList: { component: <UserList /> },
   gradeDetail: { component: <GradeDetail /> },
-  gradeList: { component: <GradeList /> },
 
   createTerm: { component: <CreateTerm /> },
   deleteTerm: { component: <DeleteTerm /> },

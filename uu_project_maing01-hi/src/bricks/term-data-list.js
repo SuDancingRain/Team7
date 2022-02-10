@@ -4,7 +4,7 @@ import { createComponent,useDataList } from "uu5g05";
 import Calls from "../calls.js";
 //@@viewOff:imports
 
-function GradeDataList(Component, displayName) {
+function TermDataList(Component, displayName) {
   return createComponent({
     //@@viewOn:statics
     displayName,
@@ -20,27 +20,27 @@ function GradeDataList(Component, displayName) {
 
     //@@viewOn:render
     render(props) {
-      const gradeListData = useDataList({
+      const termListData = useDataList({
         handlerMap: {
-          load: Calls.Grade.list
+          load: Calls.Term.list
         },
         initialDtoIn: {},
       });
 
       let result;
 
-      switch (gradeListData.state) {
+      switch (termListData.state) {
         case "pendingNoData":
         case "pending":
           result = <UU5.Bricks.Loading />;
           break;
         case "readyNoData":
         case "ready":
-          result = <Component {...props} data={gradeListData.data} />;
+          result = <Component {...props} data={termListData.data} />;
           break;
         case "errorNoData":
         case "error":
-          result = <UU5.Bricks.Error data={gradeListData.error} />;
+          result = <UU5.Bricks.Error data={termListData.error} />;
       }
 
       return result;
@@ -51,6 +51,6 @@ function GradeDataList(Component, displayName) {
 
 
 //@@viewOn:exports
-export { GradeDataList };
-export default GradeDataList;
+export { TermDataList };
+export default TermDataList;
 //@@viewOff:exports
